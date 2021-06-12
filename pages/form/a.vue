@@ -59,7 +59,7 @@ export default {
     this.form.userId = this.bio._id
     this.$axios
       .get(
-        `http://form-sig-server.herokuapp.com/question-a/${this.form.userId}`
+        `https://form-sig-server.herokuapp.com/question-a/${this.form.userId}`
       )
       .then((res) => {
         if (!res.data) return
@@ -83,7 +83,7 @@ export default {
   methods: {
     saveForm() {
       this.$axios
-        .post('http://form-sig-server.herokuapp.com/question-a', this.form)
+        .post('https://form-sig-server.herokuapp.com/question-a', this.form)
         .then((res) => {
           console.log('Success')
         })

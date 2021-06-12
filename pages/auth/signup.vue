@@ -113,7 +113,7 @@ export default {
     },
     sendForm() {
       this.$axios
-        .post('http://form-sig-server.herokuapp.com/users', this.form)
+        .post('https://form-sig-server.herokuapp.com/users', this.form)
         .then((res) => {
           this.$router.push('/auth/login')
         })

@@ -46,7 +46,7 @@ export default {
   methods: {
     signinHandler() {
       this.$axios
-        .post('http://form-sig-server.herokuapp.com/users/login', this.form)
+        .post('https://form-sig-server.herokuapp.com/users/login', this.form)
         .then((res) => {
           localStorage.setItem('data', JSON.stringify(res.data))
           this.$router.push('/')
